@@ -10,38 +10,38 @@ def index():
 @app.route('/result/<amount>/<job>/<location>')
 def result(job, location, amount):
 	amount = int(amount)
-	# fakeResults = {
-	# 	"job": "Software Engineer",
-	# 	"city": "San Francisco",
-	# 	"state": "California",
-	# 	"avgSalaryTeleport": "$50,000",
-	# 	"avgSalaryIndeed": "$60,000",
-	# 	"incomeAfterTaxes": "$43,000",
-	# 	"annualCostTeleport": "$18,000",
-	# 	"annualCostNomadlist": "$23,000",
-	# 	"savings": "$23,000"
-	# }
-	#
-	# fakeResults2 = {
-	# 	"job": "Software Engineer",
-	# 	"city": "New York",
-	# 	"state": "New York",
-	# 	"avgSalaryTeleport": "$85,000",
-	# 	"avgSalaryIndeed": "$58,000",
-	# 	"incomeAfterTaxes": "$53,000",
-	# 	"annualCostTeleport": "$33,000",
-	# 	"annualCostNomadlist": "$21,000",
-	# 	"savings": "$23,152"
-	# }
+	fakeResults = {
+		"job": "Software Engineer",
+		"city": "San Francisco",
+		"state": "California",
+		"avgSalaryTeleport": "$50,000",
+		"avgSalaryIndeed": "$60,000",
+		"incomeAfterTaxes": "$43,000",
+		"annualCostTeleport": "$18,000",
+		"annualCostNomadlist": "$23,000",
+		"savings": "$23,000"
+	}
+	
+	fakeResults2 = {
+		"job": "Software Engineer",
+		"city": "New York",
+		"state": "New York",
+		"avgSalaryTeleport": "$85,000",
+		"avgSalaryIndeed": "$58,000",
+		"incomeAfterTaxes": "$53,000",
+		"annualCostTeleport": "$33,000",
+		"annualCostNomadlist": "$21,000",
+		"savings": "$23,152"
+	}
 
 	if amount == 2:
 		results2 = costCalculator.calculateCost(location, job)
 		results = session.get('results', None)
-		return render_template('result.html', results=fakeResults, results2=fakeResults2)
+		return render_template('result.html', results=results, results2=results2)
 	elif amount == 1:
 		results = costCalculator.calculateCost(location, job)
 		session['results'] = results
-		return render_template('result.html', results=fakeResults)
+		return render_template('result.html', results=results)
 	else:
 		return render_template('result.html')
 
