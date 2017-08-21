@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homepage.css')}}" />
+
+<body>
+	<div class="wrapper">
+		{% include "logo.html" %}
+		<div class="container">
+			<div class="column-left">
+				{% if results %}
+					<h1> {{results.job}} in {{results.city}} </h1>
+					<div class="results">
+						Average salary via Teleport is: {{results.avgSalaryTeleport}}
+						<br>
+						Average salary via Indeed is: {{results.avgSalaryIndeed}}
+						<br>
+						Estimated income after Taxes is: {{results.incomeAfterTaxes}}
+						<br>
+						Annual cost estimate via Teleport is: {{results.annualCostTeleport}}
+						<br>
+						Annual cost estimate via NomadList is: {{results.annualCostNomadlist}}
+						<br>
+						Estimated annual savings: {{results.savings}}
+						<br>
+					</div>
+					<h1 class="column-savings"> {{results.savings}} </h1>
+				{% endif %}
+			</div>
+			<div class="column-center">
+				<h1 class="title"> <a href="http://localhost:5000">where2live</a></h1>
+				{% include "form2.html" %}
+				{% include "description.html" %}
+			</div>
+			<div class="column-right">
+				{% if results2 %}
+					<h1> {{results2.job}} in {{results2.city}} </h1>
+					<div class="results">
+						Average salary via Teleport is: {{results2.avgSalaryTeleport}}
+						<br>
+						Average salary via Indeed is: {{results2.avgSalaryIndeed}}
+						<br>
+						Estimated income after Taxes is: {{results2.incomeAfterTaxes}}
+						<br>
+						Annual cost estimate via Teleport is: {{results2.annualCostTeleport}}
+						<br>
+						Annual cost estimate via NomadList is: {{results2.annualCostNomadlist}}
+						<br>
+						Estimated annual savings: {{results2.savings}}
+						<br>
+					</div>
+					<h1 class="column-savings"> {{results2.savings}} </h1>
+				{% else %}
+					<h1> Try again to compare with a different city! </h1>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% include "sponsors.html" %}
+</body>

@@ -1,0 +1,33 @@
+
+To Do:
+	Form options:
+		Create Options for cities
+		Create Options for jobs --> the indeed ones...
+
+	Maybe down the middle put a description of what the service does
+
+	Handle when there are no results yet
+	Handle when there is one results already
+	Handle when there are two results already
+		Need to check first if I am receiving two or one results...
+		Then need to alter the right side if only one to say "Try Searching Again To Compare..."
+		Then need to alter the submit button to submit to a different url if looking for second
+		Then need to alter the bottom-comparison --> on the left if only one or in middle if both
+
+		It really should be customizable to remove left or right.
+		Need to be able to delete an entry.
+
+		Maybe it's just easier to have two different html for these two cases.
+
+		I'm sure Flask can handle this somehow!
+
+
+	where2live Logo
+
+	Indeed Button -- Job Search
+	Teleport Button -- Find Location and Job
+	NomadList Button -- Link to that page
+
+
+
+	Maybe cache some of this data?

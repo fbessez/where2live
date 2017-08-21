@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homepage.css')}}" />
+<body>
+	<div class="wrapper">
+		{% include "logo.html" %}
+		<div class="container">
+			<div class="column-center">
+				<h1> <a href="http://localhost:5000">where2live</a></h1>
+				<h5> Disclaimer: This is a work in progress... </h5>
+				<br />
+				{% include "form.html" %}
+				{% include "description.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "sponsors.html" %}
+</body>
