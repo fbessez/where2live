@@ -4,11 +4,13 @@
 
 ![Demo](https://user-images.githubusercontent.com/16901619/29534098-b8f1c67e-8682-11e7-83a0-5d10d1afa82f.gif)
 
-Notes:
-  At the moment, this is very crude as I did this in a few hours.
-  TO DO:
-    1. Handle front-end much better
-    2. Speed up calls
-    3. Loading visualizer
-    4. Allow more than two cities at a time
-    5. Host on Heroku
+<h5> Notes: </h5>  At the moment, this is very crude as I did this in a few hours. Still a work in progress.
+<br>
+<h3> TO DO: </h3>
+	<ul> 
+	    <li> Handle front-end much better</li>
+	    <li> Speed up calls</li>
+	    <li> Loading visualizer</li>
+	    <li> Allow more than two cities at a time</li>
+	    <li> Host on Heroku </li>
+	</ul>
